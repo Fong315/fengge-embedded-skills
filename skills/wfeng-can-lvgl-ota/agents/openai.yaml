@@ -1,0 +1,6 @@
+interface:
+  display_name: "峰哥 · 嵌入式单片机答疑"
+  short_description: "提供单片机学习路线、技术答疑、课程资料与项目硬件清单导航"
+  default_prompt: "请使用 $wfeng-can-lvgl-ota，根据我的基础解答嵌入式问题，并推荐相关学习资料。"
+policy:
+  allow_implicit_invocation: true

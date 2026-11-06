@@ -1,0 +1,15 @@
+# Local installation history and user-specific diagnostics
+backups/
+LOCAL_SETUP.md
+dist/
+.verification/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
