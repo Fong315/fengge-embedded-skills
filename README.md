@@ -33,7 +33,7 @@ npx skills add Fong315/fengge-embedded-skills --skill wfeng-can-lvgl-ota -a code
 | --- | --- |
 | [标准技能 ZIP](https://github.com/Fong315/fengge-embedded-skills/releases/latest/download/wfeng-can-lvgl-ota.zip) | 支持标准 Agent Skills 的客户端，以及豆包技能导入 |
 | [WorkBuddy 专用 ZIP](https://github.com/Fong315/fengge-embedded-skills/releases/latest/download/wfeng-can-lvgl-ota-workbuddy.zip) | WorkBuddy 的“上传技能”入口，已包含中英文展示字段 |
-| [通用导入版 Markdown](https://github.com/Fong315/fengge-embedded-skills/releases/latest) | 在版本附件中选择“峰哥嵌入式答疑-通用导入版.md”，上传到普通聊天或放入自定义助手指令 |
+| [通用导入版 Markdown](https://github.com/Fong315/fengge-embedded-skills/releases/latest/download/fengge-embedded-chat-import.md) | 中文完整文档，上传到普通聊天或放入自定义助手指令；下载文件名为 `fengge-embedded-chat-import.md` |
 
 标准 ZIP 内含完整的 `wfeng-can-lvgl-ota` 文件夹。需要手动安装时，请复制整个文件夹，保留 `references` 目录。
 
