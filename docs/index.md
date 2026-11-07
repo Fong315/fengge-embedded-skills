@@ -11,7 +11,7 @@ description: 峰哥嵌入式学习助手是公开可安装的中文 Agent Skill�
 
 **Fengge Embedded Learning Skill** helps Chinese-speaking learners plan an embedded MCU learning roadmap and find STM32, ESP32, RTOS and project resources.
 
-[查看安装方法](installation.html) · [看三组使用示例](examples.html) · [常见问题](faq.html) · [GitHub 源码](https://github.com/Fong315/fengge-embedded-skills)
+[查看安装方法](installation.html) · [选择技能版本](variants.html) · [看三组使用示例](examples.html) · [GitHub 源码](https://github.com/Fong315/fengge-embedded-skills)
 
 ## 这是什么技能？
 

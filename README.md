@@ -8,10 +8,16 @@
 
 - 技能名称：**峰哥 · 嵌入式单片机答疑**
 - 技能 ID：`wfeng-can-lvgl-ota`
-- 当前版本：`1.6.2`
+- 当前版本：`1.6.3`
 - 分发格式：标准 Agent Skill、WorkBuddy 专用包、普通聊天通用导入版
 
 [公开介绍页](https://fong315.github.io/fengge-embedded-skills/) · [逐平台安装指南](https://fong315.github.io/fengge-embedded-skills/installation.html) · [输入与回答示例](https://fong315.github.io/fengge-embedded-skills/examples.html) · [常见问题](https://fong315.github.io/fengge-embedded-skills/faq.html) · [下载安装包](https://github.com/Fong315/fengge-embedded-skills/releases/latest)
+
+## 技能版本
+
+原版 `wfeng-can-lvgl-ota` 和十个命名版本均可单独安装。新版涵盖嵌入式学习、单片机零基础、STM32、ESP32、C 语言与 51、RT-Thread、嵌入式 Linux、项目面试、蓝桥杯和硬件清单等名称，共用同一套答疑流程和资料。
+
+[在 GitHub 查看名称与安装 ID](docs/variants.md) · [公开版本列表](https://fong315.github.io/fengge-embedded-skills/variants.html) · [下载十个标准技能文件夹](https://github.com/Fong315/fengge-embedded-skills/releases/latest/download/fengge-skill-variants.zip)
 
 ## 适合谁？可以得到什么？
 

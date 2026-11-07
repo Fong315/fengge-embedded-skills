@@ -7,8 +7,7 @@ import zipfile
 
 import yaml
 
-ROOT = Path(__file__).resolve().parents[1]
-NAME = "wfeng-can-lvgl-ota"
+from build_skill import NAME, ROOT, VARIANT_ARCHIVE, VARIANTS, VERSION
 
 
 def require(condition, message):
@@ -16,15 +15,47 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def metadata(path):
+def metadata(path, name=NAME):
     text = path.read_text(encoding="utf-8")
     require(text.startswith("---\n"), f"Missing frontmatter: {path}")
     data = yaml.safe_load(text.split("---", 2)[1])
     require(isinstance(data, dict), f"Invalid YAML mapping: {path}")
-    require(data.get("name") == NAME, f"Unexpected skill name: {path}")
+    require(data.get("name") == name, f"Unexpected skill name: {path}")
     description = data.get("description")
     require(isinstance(description, str) and 0 < len(description) <= 1024, f"Invalid description: {path}")
     return data, text
+
+
+def validate_variants(standard, original, original_text, interface):
+    names = {name for name, _, _ in VARIANTS}
+    require(len(VARIANTS) == len(names) == 10 and NAME not in names, "Expected ten distinct variant IDs")
+    base_files = {path.relative_to(standard) for path in standard.rglob("*") if path.is_file()}
+    base_body = original_text.split("---", 2)[2].strip().partition("\n")[2]
+    expected = {}
+    for name, title, _ in VARIANTS:
+        require(re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name) and len(name) <= 64, f"Invalid variant ID: {name}")
+        folder = standard.parent / name
+        meta, text = metadata(folder / "SKILL.md", name)
+        require(meta["metadata"] == {**original["metadata"], "alias-of": NAME}, f"Variant metadata differs: {name}")
+        require(meta["metadata"]["version"] == VERSION, f"Wrong version: {name}")
+        heading, _, body = text.split("---", 2)[2].strip().partition("\n")
+        require(heading == f"# {title}" and body == base_body, f"Variant changed the core skill: {name}")
+        variant_ui = yaml.safe_load((folder / "agents/openai.yaml").read_text(encoding="utf-8"))
+        require(variant_ui["interface"]["display_name"] == title, f"Wrong display name: {name}")
+        prompt = interface["interface"]["default_prompt"].replace(f"${NAME}", f"${name}", 1)
+        require(variant_ui["interface"]["default_prompt"] == prompt, f"Default prompt missing ID: {name}")
+        require(variant_ui["policy"] == interface["policy"], f"Invocation policy differs: {name}")
+        variant_files = {path.relative_to(folder) for path in folder.rglob("*") if path.is_file()}
+        require(variant_files == base_files, f"Variant file set differs: {name}")
+        for relative in variant_files:
+            data = (folder / relative).read_bytes()
+            if relative.as_posix() not in {"SKILL.md", "agents/openai.yaml"}:
+                require(data == (standard / relative).read_bytes(), f"Variant resource differs: {name}/{relative}")
+            expected[(Path(name) / relative).as_posix()] = data
+    with zipfile.ZipFile(ROOT / "dist" / VARIANT_ARCHIVE) as archive:
+        require(sorted(archive.namelist()) == sorted(expected), "Variant archive file set differs")
+        require(all(archive.read(path) == data for path, data in expected.items()), "Variant archive has stale files")
+    print(f"PASS: {len(names)} independently named variants with matching core and references")
 
 
 def validate():
@@ -45,6 +76,7 @@ def validate():
     require(interface["policy"]["allow_implicit_invocation"] is True, "Implicit invocation disabled")
     require(25 <= len(interface["interface"]["short_description"]) <= 64, "Invalid Codex UI description length")
     require("$" + NAME in interface["interface"]["default_prompt"], "Default prompt missing skill name")
+    validate_variants(standard, meta, text, interface)
 
     for archive, folder, prefix in ((ROOT / "dist" / f"{NAME}.zip", standard, NAME + "/"), (ROOT / "dist" / f"{NAME}-workbuddy.zip", wb, "")):
         expected = {prefix + p.relative_to(folder).as_posix(): p.read_bytes() for p in folder.rglob("*") if p.is_file()}

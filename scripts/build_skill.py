@@ -1,5 +1,6 @@
 """Build a portable skill and a standalone chat import from the original MD."""
 from pathlib import Path
+from shutil import copyfile
 import hashlib
 import json
 import re
@@ -7,14 +8,59 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME = "wfeng-can-lvgl-ota"
-VERSION = "1.6.2"
+VERSION = "1.6.3"
 SOURCE = ROOT / "峰哥答疑单片机嵌入式-SKILL.md"
 SKILL = ROOT / "skills" / NAME
+VARIANT_ARCHIVE = "fengge-skill-variants.zip"
+VARIANTS = (
+    ("fengge-embedded-learning", "峰哥 · 嵌入式学习助手", "嵌入式学习规划、单片机答疑和项目资料导航"),
+    ("fengge-mcu-beginner", "峰哥 · 单片机零基础入门", "零基础单片机入门、学习顺序与第一步练习建议"),
+    ("fengge-stm32-roadmap", "峰哥 · STM32 学习路线", "STM32 入门路线、练习安排与常见问题答疑"),
+    ("fengge-esp32-learning", "峰哥 · ESP32 学习与资料", "ESP32 和 ESP32S3 学习答疑、项目资料与器件清单查找"),
+    ("fengge-c51-learning", "峰哥 · C 语言与 51 单片机", "嵌入式 C 语言基础、51 单片机入门与学习资料查找"),
+    ("fengge-rtthread-learning", "峰哥 · RT-Thread 学习指南", "RT-Thread 入门、实时操作系统基础答疑与项目资料查找"),
+    ("fengge-embedded-linux", "峰哥 · 嵌入式 Linux 入门", "嵌入式 Linux 和 ARM-Linux 入门学习与资料查找"),
+    ("fengge-embedded-interview", "峰哥 · 嵌入式项目面试", "嵌入式项目面试准备、常见问题和资料查找"),
+    ("fengge-lanqiao-electronics", "峰哥 · 蓝桥杯电子赛道", "蓝桥杯电子赛道学习规划与备赛资料查找"),
+    ("fengge-hardware-checklist", "峰哥 · 项目硬件清单", "查找 ESP32S3、汽车仪表盘与其他嵌入式项目的器件清单入口"),
+)
 
 
 def write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text.rstrip() + "\n", encoding="utf-8")
+
+
+def build_variants(header, entry, interface, files):
+    archive = ROOT / "dist" / VARIANT_ARCHIVE
+    with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as z:
+        for name, title, focus in VARIANTS:
+            folder = SKILL.parent / name
+            description = f"{focus}。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
+            variant_header = header.replace(f"name: {NAME}\n", f"name: {name}\n", 1)
+            variant_header = re.sub(
+                r"^description: .*?$",
+                lambda _: "description: " + json.dumps(description, ensure_ascii=False),
+                variant_header,
+                count=1,
+                flags=re.MULTILINE,
+            )
+            variant_header = variant_header.replace("metadata:\n", f'metadata:\n  alias-of: "{NAME}"\n', 1)
+            variant_entry = entry.replace("# 峰哥 · 嵌入式单片机答疑", f"# {title}", 1)
+            variant_interface = interface.replace(
+                'display_name: "峰哥 · 嵌入式单片机答疑"',
+                "display_name: " + json.dumps(title, ensure_ascii=False),
+                1,
+            ).replace(f"${NAME}", f"${name}", 1)
+            write(folder / "SKILL.md", variant_header + variant_entry)
+            write(folder / "agents" / "openai.yaml", variant_interface)
+            for source in files:
+                relative = source.relative_to(SKILL)
+                target = folder / relative
+                if relative.as_posix() not in {"SKILL.md", "agents/openai.yaml"}:
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    copyfile(source, target)
+                z.write(target, (Path(name) / relative).as_posix())
 
 
 def build():
@@ -106,18 +152,20 @@ metadata:
 答：“[ESP32S3 相关器件购买清单](https://f1457x17jj4.feishu.cn/wiki/TNU9wcFKui0KeUkMY2QcNjtongb)，这是峰哥整理的项目器件入口，可以按这里核对要买的硬件。”
 '''
     write(SKILL / "SKILL.md", header + entry)
-    write(SKILL / "agents" / "openai.yaml", '''interface:
+    interface = '''interface:
   display_name: "峰哥 · 嵌入式单片机答疑"
   short_description: "提供单片机学习路线、技术答疑、课程资料与项目硬件清单导航"
   default_prompt: "请使用 $wfeng-can-lvgl-ota，根据我的基础解答嵌入式问题，并推荐相关学习资料。"
 policy:
   allow_implicit_invocation: true
-''')
+'''
+    write(SKILL / "agents" / "openai.yaml", interface)
     # Flatten local references for chat products that can read uploads but not skills.
     standalone_entry = entry.replace("[详细答疑指南](references/mentor-guide.md)", "下文的“详细答疑指南”").replace("[资源索引](references/resources.md)", "下文的“资源索引”")
     standalone_guide = guide.replace("主入口 SKILL.md 的“读取外部资料”", "本文前部的“读取外部资料”")
     write(ROOT / "dist" / "峰哥嵌入式答疑-通用导入版.md", "# 峰哥嵌入式答疑 · 通用导入版\n\n将本文件上传到支持文件的聊天客户端，或粘贴到自定义助手指令中，并要求本次会话按此答疑。文件不会自行注册成平台技能。下文适用边界优先于详细指南。\n" + standalone_entry + "\n\n## 详细答疑指南\n\n" + standalone_guide + "\n\n## 资源索引\n\n" + resources)
     files = sorted(p for p in SKILL.rglob("*") if p.is_file())
+    build_variants(header, entry, interface, files)
     archive = ROOT / "dist" / (NAME + ".zip")
     with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as z:
         for path in files:

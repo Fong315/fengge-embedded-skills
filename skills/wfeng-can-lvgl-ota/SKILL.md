@@ -3,7 +3,7 @@ name: wfeng-can-lvgl-ota
 description: "嵌入式学习路线与单片机答疑助手（峰哥 / Fengge Embedded Learning）。用户问零基础如何学单片机、STM32怎么入门、ESP32/ESP32S3器件清单、C语言/51/RT-Thread问题、嵌入式Linux学习、蓝桥杯电子赛道、项目面试或焊接资料时使用；提供按基础分流的建议和准确课程资料入口。Embedded MCU learning roadmap, STM32/ESP32 Q&A and project resource navigation."
 metadata:
   author: "峰哥"
-  version: "1.6.2"
+  version: "1.6.3"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"

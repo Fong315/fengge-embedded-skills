@@ -6,6 +6,7 @@
 - [安装指南](https://fong315.github.io/fengge-embedded-skills/installation.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/installation.md)
 - [使用示例](https://fong315.github.io/fengge-embedded-skills/examples.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/examples.md)
 - [常见问题](https://fong315.github.io/fengge-embedded-skills/faq.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/faq.md)
+- [版本](https://fong315.github.io/fengge-embedded-skills/variants.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/variants.md)
 - [技能入口](https://github.com/Fong315/fengge-embedded-skills/blob/main/skills/wfeng-can-lvgl-ota/SKILL.md)
 - [版本下载](https://github.com/Fong315/fengge-embedded-skills/releases/latest)
 

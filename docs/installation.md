@@ -7,6 +7,8 @@ description: 如何安装峰哥嵌入式学习助手：Codex 一条命令全局�
 
 技能 ID：`wfeng-can-lvgl-ota`。展示名称：**峰哥 · 嵌入式单片机答疑**。
 
+也可以从[十个命名版本](variants.html)中选择一个安装。每个版本有独立 ID，并使用相同的答疑流程和资料。
+
 [了解技能用途](index.html) · [查看回答示例](examples.html) · [解决常见问题](faq.html)
 
 ## 先选适合你的版本

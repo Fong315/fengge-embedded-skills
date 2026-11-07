@@ -7,14 +7,47 @@ import json
 import markdown
 import yaml
 
+from build_skill import VARIANT_ARCHIVE, VARIANTS
+
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 BASE = "https://fong315.github.io/fengge-embedded-skills/"
 REPO = "https://github.com/Fong315/fengge-embedded-skills"
-PAGES = [("index", "技能介绍"), ("installation", "安装指南"), ("examples", "使用示例"), ("faq", "常见问题")]
+PAGES = [("index", "技能介绍"), ("installation", "安装指南"), ("examples", "使用示例"), ("faq", "常见问题"), ("variants", "版本")]
+
+
+def write_variant_index():
+    rows = "\n".join(f"| [{title}]({REPO}/tree/main/skills/{name}) | `{name}` | {focus} |" for name, title, focus in VARIANTS)
+    source = f'''---
+title: 峰哥嵌入式学习助手的十个技能版本与安装入口
+description: 按 STM32、ESP32、单片机零基础、C51、RT-Thread、嵌入式 Linux、项目面试、蓝桥杯与器件清单查找峰哥技能版本。每份提供独立安装 ID，共用答疑流程与资料。
+---
+
+# 选择一个峰哥技能版本
+
+十个版本提供不同的展示名称和安装 ID，共用峰哥嵌入式学习助手的答疑流程和资料。选一个符合你习惯的名称即可。
+
+| 展示名称 | 安装 ID | 描述重点 |
+| --- | --- | --- |
+{rows}
+
+## 安装任意一个版本
+
+例如，选择“峰哥 · STM32 学习路线”时运行下面的命令。
+
+```bash
+npx skills add Fong315/fengge-embedded-skills --skill fengge-stm32-roadmap -a codex -g
+```
+
+选择其他版本时，将 `--skill` 后面的值换成表中的 ID。安装后可在 Codex 中输入 `$` 加对应的 ID，选择该技能。
+
+[下载十个标准技能文件夹]({REPO}/releases/latest/download/{VARIANT_ARCHIVE})，解压后将选中的完整文件夹导入支持标准 Agent Skills 的客户端。原版及其他平台格式见[安装指南](installation.html)。
+'''
+    (DOCS / "variants.md").write_text(source, encoding="utf-8", newline="\n")
 
 
 def build():
+    write_variant_index()
     skill = (ROOT / "skills" / "wfeng-can-lvgl-ota" / "SKILL.md").read_text(encoding="utf-8")
     version = yaml.safe_load(skill.split("---", 2)[1])["metadata"]["version"]
     sitemap = Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
