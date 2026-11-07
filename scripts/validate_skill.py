@@ -63,6 +63,7 @@ def validate():
     require(urls(source.read_text(encoding="utf-8")) <= urls(combined), "Source resource links lost")
     standalone = (ROOT / "dist" / "峰哥嵌入式答疑-通用导入版.md").read_text(encoding="utf-8")
     require(not re.search(r"\]\((?:references|agents)/", standalone), "Standalone document has unresolved references")
+    require(standalone == (ROOT / "dist" / "fengge-embedded-chat-import.md").read_text(encoding="utf-8"), "Standalone download aliases differ")
     print(f"PASS: portable skill, WorkBuddy manifest, references, archives, {manifest['source_url_count']} original URLs, standalone import")
 
 

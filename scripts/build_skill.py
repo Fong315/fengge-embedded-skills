@@ -7,6 +7,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME = "wfeng-can-lvgl-ota"
+VERSION = "1.6.2"
 SOURCE = ROOT / "峰哥答疑单片机嵌入式-SKILL.md"
 SKILL = ROOT / "skills" / NAME
 
@@ -38,19 +39,35 @@ lark-cli docs +fetch --doc '<链接>' --doc-format markdown --as user
 
     header = '''---
 name: wfeng-can-lvgl-ota
-description: "峰哥嵌入式单片机答疑与学习资料导航。用于嵌入式学习路线、C语言、51单片机、STM32、ESP32/ESP32S3、RTOS/RT-Thread、ARM-Linux入门、CAN/LVGL/OTA答疑、项目硬件清单、蓝桥杯电子赛道、嵌入式面试和焊接入门；用户提到峰哥、课程链接或对应学习资料时使用。"
+description: "嵌入式学习路线与单片机答疑助手（峰哥 / Fengge Embedded Learning）。用户问零基础如何学单片机、STM32怎么入门、ESP32/ESP32S3器件清单、C语言/51/RT-Thread问题、嵌入式Linux学习、蓝桥杯电子赛道、项目面试或焊接资料时使用；提供按基础分流的建议和准确课程资料入口。Embedded MCU learning roadmap, STM32/ESP32 Q&A and project resource navigation."
 metadata:
   author: "峰哥"
-  version: "1.6.1"
+  version: "__VERSION__"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"
+  homepage: "https://fong315.github.io/fengge-embedded-skills/"
+  repository: "https://github.com/Fong315/fengge-embedded-skills"
+  language: "zh-CN"
 ---
-'''
+'''.replace("__VERSION__", VERSION)
     entry = '''
 # 峰哥 · 嵌入式单片机答疑
 
 用中文、师兄带师弟的口吻，帮助用户解决嵌入式学习问题，并从峰哥的资源索引中选择合适资料。
+
+适合单片机初学者、正在学 STM32/ESP32 的学生，以及需要课程资料、比赛或项目面试入口的学习者。
+
+## 任务与交付
+
+| 用户的请求 | 提供的帮助 |
+| --- | --- |
+| “零基础怎么学单片机”“STM32怎么入门” | 根据已有基础和目标给下一步任务，需要时附学习路线 |
+| “ESP32S3项目要买什么”“仪表盘硬件清单” | 定位课程清单入口；获取正文后再整理具体型号与数量 |
+| “C语言/51/STM32/RT-Thread问题” | 解释概念或给可执行的排查步骤，必要时索要型号和报错 |
+| “蓝桥杯怎么准备”“项目面试资料在哪” | 根据原资料索引提供对应入口和使用建议 |
+
+本技能有资料导航和一般技术答疑能力；CAN、LVGL、OTA 可以讨论，但包内没有独立专题全文。当前比赛规则、价格和芯片参数按可访问的官方来源核对。
 
 ## 加载与使用
 
@@ -110,9 +127,9 @@ policy:
 display_name_en: "Brother Feng Embedded MCU Mentor"
 description_zh: "峰哥嵌入式单片机答疑：学习路线、C语言、STM32、ESP32、RTOS、Linux、硬件清单、蓝桥杯、面试与课程资料导航。"
 description_en: "Embedded MCU learning guidance and resource navigation for C, 8051, STM32, ESP32, RTOS, Linux, hardware lists, competitions and interviews."
-version: "1.6.1"
+version: "__VERSION__"
 author: "峰哥"
-'''
+'''.replace("__VERSION__", VERSION)
     wb_header = header.replace("metadata:\n", workbuddy_fields + "metadata:\n", 1)
     wb_entry = entry.replace("读取 [详细答疑指南](references/mentor-guide.md)", "读取 @references/mentor-guide.md").replace("读取 [资源索引](references/resources.md)", "读取 @references/resources.md")
     wb_root = ROOT / "dist" / "workbuddy" / NAME
@@ -130,6 +147,7 @@ author: "峰哥"
         raise ValueError(f"Lost source links: {sorted(missing)}")
     manifest = {"name": NAME, "source_sha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(), "source_url_count": len(urls(original)), "files": {p.relative_to(SKILL).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
     write(ROOT / "dist" / "manifest.json", json.dumps(manifest, ensure_ascii=False, indent=2))
+    write(ROOT / "dist" / "fengge-embedded-chat-import.md", (ROOT / "dist" / "峰哥嵌入式答疑-通用导入版.md").read_text(encoding="utf-8"))
     print(json.dumps({"skill": str(SKILL), "archive": str(archive), "preserved_urls": len(urls(original))}, ensure_ascii=False))
 
 

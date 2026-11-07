@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>嵌入式 AI 学习 Skill 常见问题：STM32 学习、客户端兼容、安装与自动调用</title>
+  <meta name="description" content="峰哥嵌入式学习助手 FAQ：零基础能不能用，支持哪些芯片与客户端，如何安装，是否需要 API Key，能否读取飞书正文，以及网页搜索和技能自动调用有什么区别。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://fong315.github.io/fengge-embedded-skills/faq.html">
+  <link rel="stylesheet" href="style.css">
+  <link rel="sitemap" type="application/xml" href="https://fong315.github.io/fengge-embedded-skills/sitemap.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="嵌入式 AI 学习 Skill 常见问题：STM32 学习、客户端兼容、安装与自动调用">
+  <meta property="og:description" content="峰哥嵌入式学习助手 FAQ：零基础能不能用，支持哪些芯片与客户端，如何安装，是否需要 API Key，能否读取飞书正文，以及网页搜索和技能自动调用有什么区别。">
+  <meta property="og:url" content="https://fong315.github.io/fengge-embedded-skills/faq.html">
+  <meta property="og:site_name" content="峰哥嵌入式学习助手">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "峰哥嵌入式学习助手", "alternateName": "Fengge Embedded Learning Skill", "description": "峰哥嵌入式学习助手 FAQ：零基础能不能用，支持哪些芯片与客户端，如何安装，是否需要 API Key，能否读取飞书正文，以及网页搜索和技能自动调用有什么区别。", "codeRepository": "https://github.com/Fong315/fengge-embedded-skills", "url": "https://fong315.github.io/fengge-embedded-skills/", "version": "1.6.2", "inLanguage": "zh-CN", "programmingLanguage": "Markdown", "isAccessibleForFree": true}</script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">F</span><span>峰哥<span class="brand-sub">嵌入式学习助手</span></span></a>
+    <nav aria-label="主导航"><a href="index.html">技能介绍</a><a href="installation.html">安装指南</a><a href="examples.html">使用示例</a><a href="faq.html" aria-current="page">常见问题</a></nav>
+    <a class="github" href="https://github.com/Fong315/fengge-embedded-skills">GitHub ↗</a>
+  </div></header>
+  <div class="layout">
+    <aside aria-label="本页目录"><span class="eyebrow">本页内容</span><div class="toc">
+<ul>
+<li><a href="#_1">常见问题</a><ul>
+<li><a href="#stm32-ai-skill">有没有适合 STM32 初学者的中文 AI Skill？</a></li>
+<li><a href="#_2">零基础可以用吗？</a></li>
+<li><a href="#stm32esp32-rt-thread">它支持 STM32、ESP32 和 RT-Thread 吗？</a></li>
+<li><a href="#ai">这是独立软件，还是安装到 AI 客户端的技能？</a></li>
+<li><a href="#codexdeepseekworkbuddy">Codex、DeepSeek、WorkBuddy、豆包都能安装吗？</a></li>
+<li><a href="#api-key">安装需要购买课程或提供 API Key 吗？</a></li>
+<li><a href="#_3">能直接读取飞书里的所有资料吗？</a></li>
+<li><a href="#esp32s3">能给完整的 ESP32S3 器件采购表吗？</a></li>
+<li><a href="#ai_1">安装后，AI 一定会自动使用它吗？</a></li>
+<li><a href="#github">为什么 GitHub 能下载，软件的官方市场里却搜不到？</a></li>
+<li><a href="#ai_2">联网 AI 能看到这个介绍页，就等于能使用技能吗？</a></li>
+<li><a href="#sitemap-llmstxt">为什么目录里有 sitemap 和 llms.txt？</a></li>
+<li><a href="#_4">回答和示例能保证实验成功吗？</a></li>
+<li><a href="#_5">哪里查看更新或反馈问题？</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</aside>
+    <main id="main"><div class="page-meta"><span>中文 · EMBEDDED LEARNING</span><span>v1.6.2</span></div>
+      <article><h1 id="_1">常见问题</h1>
+<p><a href="index.html">技能用途</a> · <a href="installation.html">安装指南</a> · <a href="examples.html">使用示例</a></p>
+<h2 id="stm32-ai-skill">有没有适合 STM32 初学者的中文 AI Skill？</h2>
+<p>峰哥嵌入式学习助手面向中文单片机学习者，提供学习阶段分流、一般技术解释和资料导航。你可以告诉它 C 语言基础、已有项目和学习目标，要求具体练习任务。客户端里的名称是“峰哥 · 嵌入式单片机答疑”，安装 ID 为 <code>wfeng-can-lvgl-ota</code>。</p>
+<h2 id="_2">零基础可以用吗？</h2>
+<p>可以用来确认从哪里开始、选择第一步练习和寻找入门视频。可以这样问：“我没有单片机基础，想做一个能按键控制 LED 的练习，请告诉我先学什么。”动手时需结合实际器件和开发板说明。</p>
+<h2 id="stm32esp32-rt-thread">它支持 STM32、ESP32 和 RT-Thread 吗？</h2>
+<p>包内资料索引包含 C 语言、51、STM32、ESP32、RT-Thread 常见问题，以及 ARM-Linux、焊接、蓝桥杯和项目面试入口。CAN、LVGL、OTA 可作为一般技术话题讨论，目前没有打包独立专题全文。</p>
+<h2 id="ai">这是独立软件，还是安装到 AI 客户端的技能？</h2>
+<p>它是标准 Agent Skill，由 <code>SKILL.md</code> 和参考资料组成，需要支持技能的 AI 客户端加载。普通聊天可上传完整 Markdown 获得本次会话上下文。它本身不提供独立模型服务或开发板控制程序。</p>
+<h2 id="codexdeepseekworkbuddy">Codex、DeepSeek、WorkBuddy、豆包都能安装吗？</h2>
+<p>Codex 和兼容标准格式的宿主可用标准包；DeepSeek Harness 使用生效的技能目录；WorkBuddy 使用专用 ZIP；支持技能的豆包客户端可导入标准包。普通 DeepSeek、豆包聊天使用文档导入。具体以客户端版本、账户和支持能力为准，见<a href="installation.html">逐平台安装指南</a>。</p>
+<h2 id="api-key">安装需要购买课程或提供 API Key 吗？</h2>
+<p>本仓库和版本附件公开可下载，技能包本身不要求课程购买凭证，也不要求专属 API Key。使用 AI 客户端可能有账户、订阅或模型调用要求，由该客户端决定。资料索引中的课程与其他外链内容按其自身说明访问。</p>
+<h2 id="_3">能直接读取飞书里的所有资料吗？</h2>
+<p>不能仅靠技能包确认所有正文。包内提供链接，实际读取需要客户端的文档工具、网络和访问权限。没有读到正文时，应给入口并说明限制。已获取正文后才可整理具体课程内容。</p>
+<h2 id="esp32s3">能给完整的 ESP32S3 器件采购表吗？</h2>
+<p>先定位对应清单，再读取课程正文，或由你粘贴、上传清单。没有正文时可以给准确入口，不能确认课程的全部型号和数量。<a href="examples.html#hardware-list">示例三</a>展示了这种情况。</p>
+<h2 id="ai_1">安装后，AI 一定会自动使用它吗？</h2>
+<p>自动选用取决于技能是否已进入当前会话可用范围、是否启用，以及请求是否匹配用途描述。需要明确调用时，直接选择技能；Codex 中可输入 <code>$wfeng-can-lvgl-ota</code>。自动选用也不代表自动安装。</p>
+<h2 id="github">为什么 GitHub 能下载，软件的官方市场里却搜不到？</h2>
+<p>GitHub 仓库、通用技能目录和各平台官方市场是不同分发渠道。官方市场需要对应平台的提交和审核；公开仓库也不会自动给所有用户安装技能。你可以直接使用<a href="installation.html">安装入口</a>。</p>
+<h2 id="ai_2">联网 AI 能看到这个介绍页，就等于能使用技能吗？</h2>
+<p>网页检索可以帮助 AI 了解用途、引用介绍并给出下载链接。运行技能仍需要客户端加载。网页发现、技能安装和按任务调用是不同步骤。</p>
+<h2 id="sitemap-llmstxt">为什么目录里有 sitemap 和 llms.txt？</h2>
+<p>站点地图列出公开页面地址；<code>llms.txt</code> 提供简短阅读索引，方便支持这种约定的工具按链接读取。它们不保证任何搜索引擎收录、推荐或自动调用，也不会替代清晰的正文内容。</p>
+<h2 id="_4">回答和示例能保证实验成功吗？</h2>
+<p>示例用于说明回答形式。实际代码、接线、外设参数和采购方案需要依据具体芯片、开发板和实验结果验证。使用时可提供型号、最小代码、报错和测量结果，以便得到更具体的帮助。</p>
+<h2 id="_5">哪里查看更新或反馈问题？</h2>
+<p>在 <a href="https://github.com/Fong315/fengge-embedded-skills/releases/latest">GitHub Releases</a> 获取版本，在 <a href="https://github.com/Fong315/fengge-embedded-skills/issues">Issues</a> 反馈。请说明所用客户端、版本、问题输入和实际回答。</p></article>
+      <div class="next-step"><strong>把下一步学习任务说清楚。</strong><span>选择适合你的客户端，带着一个真实问题开始。</span><a href="installation.html">查看安装指南 →</a></div>
+    </main>
+  </div>
+  <footer><span>峰哥 · 嵌入式单片机答疑</span><div><a href="faq.md">本页 Markdown</a><a href="llms.txt">阅读索引</a><a href="sitemap.xml">站点地图</a><a href="https://github.com/Fong315/fengge-embedded-skills/issues">反馈问题</a></div><p>公开说明与安装资料。搜索收录和技能调用由相应平台决定。</p></footer>
+</body>
+</html>

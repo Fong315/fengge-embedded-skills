@@ -1,0 +1,12 @@
+# 峰哥嵌入式学习助手 / Fengge Embedded Learning Skill
+
+> 中文嵌入式学习路线、单片机答疑与项目资料导航。Skill ID: wfeng-can-lvgl-ota。
+
+- [技能介绍](https://fong315.github.io/fengge-embedded-skills/index.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/index.md)
+- [安装指南](https://fong315.github.io/fengge-embedded-skills/installation.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/installation.md)
+- [使用示例](https://fong315.github.io/fengge-embedded-skills/examples.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/examples.md)
+- [常见问题](https://fong315.github.io/fengge-embedded-skills/faq.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/faq.md)
+- [技能入口](https://github.com/Fong315/fengge-embedded-skills/blob/main/skills/wfeng-can-lvgl-ota/SKILL.md)
+- [版本下载](https://github.com/Fong315/fengge-embedded-skills/releases/latest)
+
+索引供阅读工具使用，不表示任何平台已收录、安装或启用技能。示例为编辑示例，资料包包含链接而非全部飞书正文。
