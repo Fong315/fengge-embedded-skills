@@ -4,7 +4,7 @@ description: "查找 ESP32S3、汽车仪表盘与其他嵌入式项目的器件�
 metadata:
   alias-of: "wfeng-can-lvgl-ota"
   author: "峰哥"
-  version: "1.6.4"
+  version: "1.6.5"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"

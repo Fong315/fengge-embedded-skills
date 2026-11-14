@@ -1,10 +1,10 @@
 ---
 name: fengge-esp32-learning
-description: "用于 ESP32 入门与学习路线规划，帮助安排烧录、串口和 Wi-Fi 练习，查找 ESP32-S3 项目资料与器件清单。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
+description: "适合想了解 ESP32 怎么学、查找 ESP32 入门教程或做 ESP32-S3 项目的人，提供烧录、串口和 Wi-Fi 练习建议及器件清单入口。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
 metadata:
   alias-of: "wfeng-can-lvgl-ota"
   author: "峰哥"
-  version: "1.6.4"
+  version: "1.6.5"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"

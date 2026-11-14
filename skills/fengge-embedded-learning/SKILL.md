@@ -1,10 +1,10 @@
 ---
 name: fengge-embedded-learning
-description: "帮助规划嵌入式学习路线，梳理 C 语言、51 单片机、STM32、ESP32、RT-Thread 与嵌入式 Linux 的学习顺序。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
+description: "面向零基础学嵌入式或正在自学嵌入式的人，按基础安排 C 语言、单片机、RT-Thread 与嵌入式 Linux 的学习顺序和项目练习。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
 metadata:
   alias-of: "wfeng-can-lvgl-ota"
   author: "峰哥"
-  version: "1.6.4"
+  version: "1.6.5"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"

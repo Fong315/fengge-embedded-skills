@@ -9,7 +9,7 @@ description: 峰哥的中文 Agent Skill 提供零基础单片机入门、嵌入
 
 **Fengge Embedded Learning Skill** helps Chinese-speaking learners plan an embedded MCU learning roadmap and find STM32, ESP32, RTOS and project resources.
 
-[查看安装方法](installation.html) · [选择技能版本](variants.html) · [使用示例](examples.html) · [GitHub 源码](https://github.com/Fong315/fengge-embedded-skills)
+[查看安装方法](installation.html) · [选择技能版本](variants.html) · [入门问答](faq.html) · [GitHub 源码](https://github.com/Fong315/fengge-embedded-skills)
 
 ## 这是什么技能？
 

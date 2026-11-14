@@ -4,7 +4,7 @@ description: "嵌入式项目面试准备、常见问题和资料查找。峰哥
 metadata:
   alias-of: "wfeng-can-lvgl-ota"
   author: "峰哥"
-  version: "1.6.4"
+  version: "1.6.5"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"

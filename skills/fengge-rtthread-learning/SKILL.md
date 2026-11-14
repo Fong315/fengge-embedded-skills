@@ -4,7 +4,7 @@ description: "RT-Thread 入门、实时操作系统基础答疑与项目资料�
 metadata:
   alias-of: "wfeng-can-lvgl-ota"
   author: "峰哥"
-  version: "1.6.4"
+  version: "1.6.5"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"

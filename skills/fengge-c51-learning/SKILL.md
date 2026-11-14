@@ -1,10 +1,10 @@
 ---
 name: fengge-c51-learning
-description: "嵌入式 C 语言基础、51 单片机入门与学习资料查找。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
+description: "提供 C 语言基础、51 单片机入门（C51／8051）和 LED、按键等练习建议，查找对应学习资料。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
 metadata:
   alias-of: "wfeng-can-lvgl-ota"
   author: "峰哥"
-  version: "1.6.4"
+  version: "1.6.5"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"

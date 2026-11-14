@@ -8,16 +8,16 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME = "wfeng-can-lvgl-ota"
-VERSION = "1.6.4"
+VERSION = "1.6.5"
 SOURCE = ROOT / "峰哥答疑单片机嵌入式-SKILL.md"
 SKILL = ROOT / "skills" / NAME
 VARIANT_ARCHIVE = "fengge-skill-variants.zip"
 VARIANTS = (
-    ("fengge-embedded-learning", "峰哥 · 嵌入式学习助手", "帮助规划嵌入式学习路线，梳理 C 语言、51 单片机、STM32、ESP32、RT-Thread 与嵌入式 Linux 的学习顺序"),
-    ("fengge-mcu-beginner", "峰哥 · 单片机零基础入门", "面向零基础单片机学习者，提供单片机入门路线、开发板选择思路和点亮 LED、按键输入等第一步练习"),
-    ("fengge-stm32-roadmap", "峰哥 · STM32 学习路线", "用于 STM32 入门与学习路线规划，提供 GPIO、定时器、中断、串口的练习建议与常见问题排查思路"),
-    ("fengge-esp32-learning", "峰哥 · ESP32 学习与资料", "用于 ESP32 入门与学习路线规划，帮助安排烧录、串口和 Wi-Fi 练习，查找 ESP32-S3 项目资料与器件清单"),
-    ("fengge-c51-learning", "峰哥 · C 语言与 51 单片机", "嵌入式 C 语言基础、51 单片机入门与学习资料查找"),
+    ("fengge-embedded-learning", "峰哥 · 嵌入式学习助手", "面向零基础学嵌入式或正在自学嵌入式的人，按基础安排 C 语言、单片机、RT-Thread 与嵌入式 Linux 的学习顺序和项目练习"),
+    ("fengge-mcu-beginner", "峰哥 · 单片机零基础入门", "零基础学单片机时提供单片机入门路线、开发板选择思路和 LED 点灯、按键输入等第一步练习"),
+    ("fengge-stm32-roadmap", "峰哥 · STM32 学习路线", "适合想了解 STM32 怎么学、查找 STM32 入门教程或安排自学路线的人，提供 GPIO、定时器、中断、串口的练习与排查思路"),
+    ("fengge-esp32-learning", "峰哥 · ESP32 学习与资料", "适合想了解 ESP32 怎么学、查找 ESP32 入门教程或做 ESP32-S3 项目的人，提供烧录、串口和 Wi-Fi 练习建议及器件清单入口"),
+    ("fengge-c51-learning", "峰哥 · C 语言与 51 单片机", "提供 C 语言基础、51 单片机入门（C51／8051）和 LED、按键等练习建议，查找对应学习资料"),
     ("fengge-rtthread-learning", "峰哥 · RT-Thread 学习指南", "RT-Thread 入门、实时操作系统基础答疑与项目资料查找"),
     ("fengge-embedded-linux", "峰哥 · 嵌入式 Linux 入门", "嵌入式 Linux 和 ARM-Linux 入门学习与资料查找"),
     ("fengge-embedded-interview", "峰哥 · 嵌入式项目面试", "嵌入式项目面试准备、常见问题和资料查找"),
@@ -85,7 +85,7 @@ lark-cli docs +fetch --doc '<链接>' --doc-format markdown --as user
 
     header = '''---
 name: wfeng-can-lvgl-ota
-description: "峰哥的中文单片机学习与嵌入式学习助手。用户询问零基础单片机入门、51 单片机、STM32 学习路线、ESP32 入门或 ESP32-S3 项目时使用。按已有基础提供下一步练习建议，解答 C 语言、GPIO、串口、中断等常见问题，查找 STM32、ESP32、RT-Thread、嵌入式 Linux、项目硬件清单、蓝桥杯、面试或焊接资料。Chinese MCU and embedded systems learning skill for beginners, STM32 and ESP32."
+description: "峰哥的中文单片机学习与嵌入式学习助手。适用于零基础学单片机、零基础学嵌入式、51 单片机（C51／8051）入门，以及 STM32 怎么学、ESP32 怎么学等问题。按基础规划嵌入式自学、单片机入门、STM32 学习路线与 ESP32 学习路线，安排 C 语言、点灯、按键、串口、中断、Wi-Fi 等练习。查找入门教程、ESP32-S3 项目硬件清单、RT-Thread、嵌入式 Linux、蓝桥杯、面试或焊接资料。Chinese MCU and embedded systems learning skill for beginners, STM32 and ESP32."
 metadata:
   author: "峰哥"
   version: "__VERSION__"
@@ -173,7 +173,7 @@ policy:
     # WorkBuddy's submission manifest adds fields beyond the portable spec.
     workbuddy_fields = '''display_name: "峰哥 · 嵌入式单片机答疑"
 display_name_en: "Brother Feng Embedded MCU Mentor"
-description_zh: "峰哥的单片机学习与嵌入式学习助手，提供单片机入门、STM32 和 ESP32 学习路线、外设答疑与项目资料导航，涵盖 C 语言、51 单片机、RTOS、嵌入式 Linux、硬件清单、蓝桥杯和面试。"
+description_zh: "峰哥的中文单片机学习与嵌入式学习助手，适合零基础学单片机和嵌入式自学。提供 51 单片机入门、STM32 与 ESP32 学习路线、外设答疑、ESP32-S3 项目清单及教程资料入口。"
 description_en: "Embedded MCU learning guidance and resource navigation for C, 8051, STM32, ESP32, RTOS, Linux, hardware lists, competitions and interviews."
 version: "__VERSION__"
 author: "峰哥"

@@ -6,7 +6,7 @@
 
 - 技能名称：**峰哥 · 嵌入式单片机答疑**
 - 技能 ID：`wfeng-can-lvgl-ota`
-- 当前版本：`1.6.4`
+- 当前版本：`1.6.5`
 - 分发格式：标准 Agent Skill、WorkBuddy 专用包、普通聊天通用导入版
 
 [公开介绍页](https://fong315.github.io/fengge-embedded-skills/) · [逐平台安装指南](https://fong315.github.io/fengge-embedded-skills/installation.html) · [输入与回答示例](https://fong315.github.io/fengge-embedded-skills/examples.html) · [skills.sh 技能页](https://www.skills.sh/fong315/fengge-embedded-skills/wfeng-can-lvgl-ota) · [下载安装包](https://github.com/Fong315/fengge-embedded-skills/releases/latest)
@@ -110,7 +110,16 @@ $wfeng-can-lvgl-ota 我是大二学生，会一点 C 语言，想学 STM32，帮
 
 ## 如何搜索到这个技能
 
-在 GitHub 搜索仓库名 `fengge-embedded-skills`，或在 [skills.sh](https://www.skills.sh/fong315/fengge-embedded-skills/wfeng-can-lvgl-ota) 搜索 `单片机学习`、`嵌入式学习`、`单片机入门`、`STM32 学习路线` 或 `ESP32 学习路线`。通过 Skills CLI 也可以按技能 ID 搜索。
+在 GitHub 搜索仓库名 `fengge-embedded-skills`，或在 [skills.sh](https://www.skills.sh/fong315/fengge-embedded-skills/wfeng-can-lvgl-ota) 搜索与你需求相符的学习方向。
+
+| 想找什么 | 可搜索的词 | 直接阅读 |
+| --- | --- | --- |
+| 零基础学单片机 | `单片机学习`、`单片机入门`、`单片机学习路线`、`51单片机入门`、`单片机学习资料` | [零基础学单片机，先学什么](https://fong315.github.io/fengge-embedded-skills/faq.html#zero-basics) |
+| 自学嵌入式 | `嵌入式学习`、`嵌入式入门`、`嵌入式学习路线` | [嵌入式自学路线](https://fong315.github.io/fengge-embedded-skills/faq.html#self-study) |
+| STM32 怎么学 | `STM32入门`、`STM32 学习路线` | [STM32 入门练习](https://fong315.github.io/fengge-embedded-skills/faq.html#learn-stm32) |
+| ESP32 怎么学 | `ESP32入门`、`ESP32-S3入门`、`ESP32 学习路线` | [ESP32 开发板入门](https://fong315.github.io/fengge-embedded-skills/faq.html#learn-esp32) |
+
+通过 Skills CLI 也可以按技能 ID 搜索。
 
 ```bash
 npx skills find wfeng-can-lvgl-ota

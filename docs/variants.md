@@ -9,11 +9,11 @@ description: 按 STM32、ESP32、单片机零基础、C51、RT-Thread、嵌入�
 
 | 展示名称 | 安装 ID | 描述重点 |
 | --- | --- | --- |
-| [峰哥 · 嵌入式学习助手](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-embedded-learning) | `fengge-embedded-learning` | 帮助规划嵌入式学习路线，梳理 C 语言、51 单片机、STM32、ESP32、RT-Thread 与嵌入式 Linux 的学习顺序 |
-| [峰哥 · 单片机零基础入门](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-mcu-beginner) | `fengge-mcu-beginner` | 面向零基础单片机学习者，提供单片机入门路线、开发板选择思路和点亮 LED、按键输入等第一步练习 |
-| [峰哥 · STM32 学习路线](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-stm32-roadmap) | `fengge-stm32-roadmap` | 用于 STM32 入门与学习路线规划，提供 GPIO、定时器、中断、串口的练习建议与常见问题排查思路 |
-| [峰哥 · ESP32 学习与资料](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-esp32-learning) | `fengge-esp32-learning` | 用于 ESP32 入门与学习路线规划，帮助安排烧录、串口和 Wi-Fi 练习，查找 ESP32-S3 项目资料与器件清单 |
-| [峰哥 · C 语言与 51 单片机](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-c51-learning) | `fengge-c51-learning` | 嵌入式 C 语言基础、51 单片机入门与学习资料查找 |
+| [峰哥 · 嵌入式学习助手](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-embedded-learning) | `fengge-embedded-learning` | 面向零基础学嵌入式或正在自学嵌入式的人，按基础安排 C 语言、单片机、RT-Thread 与嵌入式 Linux 的学习顺序和项目练习 |
+| [峰哥 · 单片机零基础入门](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-mcu-beginner) | `fengge-mcu-beginner` | 零基础学单片机时提供单片机入门路线、开发板选择思路和 LED 点灯、按键输入等第一步练习 |
+| [峰哥 · STM32 学习路线](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-stm32-roadmap) | `fengge-stm32-roadmap` | 适合想了解 STM32 怎么学、查找 STM32 入门教程或安排自学路线的人，提供 GPIO、定时器、中断、串口的练习与排查思路 |
+| [峰哥 · ESP32 学习与资料](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-esp32-learning) | `fengge-esp32-learning` | 适合想了解 ESP32 怎么学、查找 ESP32 入门教程或做 ESP32-S3 项目的人，提供烧录、串口和 Wi-Fi 练习建议及器件清单入口 |
+| [峰哥 · C 语言与 51 单片机](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-c51-learning) | `fengge-c51-learning` | 提供 C 语言基础、51 单片机入门（C51／8051）和 LED、按键等练习建议，查找对应学习资料 |
 | [峰哥 · RT-Thread 学习指南](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-rtthread-learning) | `fengge-rtthread-learning` | RT-Thread 入门、实时操作系统基础答疑与项目资料查找 |
 | [峰哥 · 嵌入式 Linux 入门](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-embedded-linux) | `fengge-embedded-linux` | 嵌入式 Linux 和 ARM-Linux 入门学习与资料查找 |
 | [峰哥 · 嵌入式项目面试](https://github.com/Fong315/fengge-embedded-skills/tree/main/skills/fengge-embedded-interview) | `fengge-embedded-interview` | 嵌入式项目面试准备、常见问题和资料查找 |

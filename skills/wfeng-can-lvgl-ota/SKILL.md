@@ -1,9 +1,9 @@
 ---
 name: wfeng-can-lvgl-ota
-description: "峰哥的中文单片机学习与嵌入式学习助手。用户询问零基础单片机入门、51 单片机、STM32 学习路线、ESP32 入门或 ESP32-S3 项目时使用。按已有基础提供下一步练习建议，解答 C 语言、GPIO、串口、中断等常见问题，查找 STM32、ESP32、RT-Thread、嵌入式 Linux、项目硬件清单、蓝桥杯、面试或焊接资料。Chinese MCU and embedded systems learning skill for beginners, STM32 and ESP32."
+description: "峰哥的中文单片机学习与嵌入式学习助手。适用于零基础学单片机、零基础学嵌入式、51 单片机（C51／8051）入门，以及 STM32 怎么学、ESP32 怎么学等问题。按基础规划嵌入式自学、单片机入门、STM32 学习路线与 ESP32 学习路线，安排 C 语言、点灯、按键、串口、中断、Wi-Fi 等练习。查找入门教程、ESP32-S3 项目硬件清单、RT-Thread、嵌入式 Linux、蓝桥杯、面试或焊接资料。Chinese MCU and embedded systems learning skill for beginners, STM32 and ESP32."
 metadata:
   author: "峰哥"
-  version: "1.6.4"
+  version: "1.6.5"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"
