@@ -1,10 +1,10 @@
 ---
 name: fengge-mcu-beginner
-description: "零基础单片机入门、学习顺序与第一步练习建议。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
+description: "面向零基础单片机学习者，提供单片机入门路线、开发板选择思路和点亮 LED、按键输入等第一步练习。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
 metadata:
   alias-of: "wfeng-can-lvgl-ota"
   author: "峰哥"
-  version: "1.6.3"
+  version: "1.6.4"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"

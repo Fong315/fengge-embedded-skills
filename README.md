@@ -1,17 +1,15 @@
-# 峰哥嵌入式学习助手 Skill · STM32 / ESP32 学习路线与单片机答疑
+# 单片机学习与嵌入式学习｜STM32、ESP32 入门 · 峰哥 AI Skill
 
-**零基础怎样学单片机？STM32 怎么入门？ESP32S3 项目资料和硬件清单在哪里？**
-
-峰哥嵌入式学习助手是公开可安装的中文 **Agent Skill**。它根据你的 C 语言、单片机和项目基础，提供下一步学习建议、一般技术解释，并从峰哥整理的资料中定位对应课程、视频和硬件清单。
+峰哥嵌入式学习助手是公开可安装的中文 **Agent Skill**，提供零基础单片机入门、STM32 和 ESP32 学习路线、技术答疑与项目资料导航。告诉它你的 C 语言基础和手上的开发板，就可以从点亮 LED、按键输入或串口输出这类具体练习开始。已有项目时，也可以按报错、接线和目标现象排查，或查找对应的课程、视频和器件清单。
 
 **Chinese embedded-systems learning skill for Codex and compatible agents. Covers C, 8051, STM32, ESP32, RTOS, Linux, project hardware, competitions, and interviews.**
 
 - 技能名称：**峰哥 · 嵌入式单片机答疑**
 - 技能 ID：`wfeng-can-lvgl-ota`
-- 当前版本：`1.6.3`
+- 当前版本：`1.6.4`
 - 分发格式：标准 Agent Skill、WorkBuddy 专用包、普通聊天通用导入版
 
-[公开介绍页](https://fong315.github.io/fengge-embedded-skills/) · [逐平台安装指南](https://fong315.github.io/fengge-embedded-skills/installation.html) · [输入与回答示例](https://fong315.github.io/fengge-embedded-skills/examples.html) · [常见问题](https://fong315.github.io/fengge-embedded-skills/faq.html) · [下载安装包](https://github.com/Fong315/fengge-embedded-skills/releases/latest)
+[公开介绍页](https://fong315.github.io/fengge-embedded-skills/) · [逐平台安装指南](https://fong315.github.io/fengge-embedded-skills/installation.html) · [输入与回答示例](https://fong315.github.io/fengge-embedded-skills/examples.html) · [skills.sh 技能页](https://www.skills.sh/fong315/fengge-embedded-skills/wfeng-can-lvgl-ota) · [下载安装包](https://github.com/Fong315/fengge-embedded-skills/releases/latest)
 
 ## 技能版本
 
@@ -19,13 +17,14 @@
 
 [在 GitHub 查看名称与安装 ID](docs/variants.md) · [公开版本列表](https://fong315.github.io/fengge-embedded-skills/variants.html) · [下载十个标准技能文件夹](https://github.com/Fong315/fengge-embedded-skills/releases/latest/download/fengge-skill-variants.zip)
 
-## 适合谁？可以得到什么？
+## 你想学什么？
 
-| 你的情况 | 可以用它做什么 |
+| 学习方向 | 可以用它做什么 |
 | --- | --- |
-| 刚学 C 语言或 51，不清楚学习顺序 | 确认下一步基础练习，获取单片机入门路线与视频入口 |
-| 正在学 STM32、ESP32，遇到外设或代码问题 | 获得一般解释与排查步骤，结合具体型号、接线和报错继续定位 |
-| 想做 ESP32S3、仪表盘或 RT-Thread 项目 | 找到对应项目 FAQ、器件清单和学习资料 |
+| [单片机学习与零基础单片机入门](https://fong315.github.io/fengge-embedded-skills/#mcu-basics) | 根据 C 语言基础和现有开发板，选择第一步练习，找到 51 单片机或其他入门资料 |
+| [嵌入式学习路线](https://fong315.github.io/fengge-embedded-skills/#embedded-roadmap) | 按现有基础安排 C 语言、单片机、RTOS 或嵌入式 Linux 的学习顺序 |
+| [STM32 入门与学习路线](https://fong315.github.io/fengge-embedded-skills/#stm32) | 规划 GPIO、按键、串口、定时器和中断练习，结合型号和代码排查问题 |
+| [ESP32 入门与项目资料](https://fong315.github.io/fengge-embedded-skills/#esp32) | 从刷写程序和观察串口日志开始，查找 ESP32-S3 项目资料、常见问题和器件清单 |
 | 准备蓝桥杯或嵌入式项目面试 | 定位原资料索引里的备赛与项目面试入口 |
 
 技能采用中文师兄式交流。用户已经说明背景时会沿用；明确索要链接或要求直接回答时优先完成请求。CAN、LVGL、OTA 可作为一般技术话题讨论，当前包内没有独立专题全文。
@@ -111,15 +110,7 @@ $wfeng-can-lvgl-ota 我是大二学生，会一点 C 语言，想学 STM32，帮
 
 ## 如何搜索到这个技能
 
-在 GitHub 搜索仓库名 `fengge-embedded-skills`，或组合以下关键词：
-
-```text
-峰哥 嵌入式 skill
-wfeng-can-lvgl-ota
-STM32 ESP32 embedded agent skills
-```
-
-也可以在支持 Skills CLI 的终端尝试：
+在 GitHub 搜索仓库名 `fengge-embedded-skills`，或在 [skills.sh](https://www.skills.sh/fong315/fengge-embedded-skills/wfeng-can-lvgl-ota) 搜索 `单片机学习`、`嵌入式学习`、`单片机入门`、`STM32 学习路线` 或 `ESP32 学习路线`。通过 Skills CLI 也可以按技能 ID 搜索。
 
 ```bash
 npx skills find wfeng-can-lvgl-ota

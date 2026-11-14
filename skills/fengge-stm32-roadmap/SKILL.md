@@ -1,10 +1,10 @@
 ---
 name: fengge-stm32-roadmap
-description: "STM32 入门路线、练习安排与常见问题答疑。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
+description: "用于 STM32 入门与学习路线规划，提供 GPIO、定时器、中断、串口的练习建议与常见问题排查思路。峰哥嵌入式学习助手的同内容版本，共用学习路线、答疑流程与资料索引。"
 metadata:
   alias-of: "wfeng-can-lvgl-ota"
   author: "峰哥"
-  version: "1.6.3"
+  version: "1.6.4"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"

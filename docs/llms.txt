@@ -1,6 +1,6 @@
 # 峰哥嵌入式学习助手 / Fengge Embedded Learning Skill
 
-> 中文嵌入式学习路线、单片机答疑与项目资料导航。Skill ID: wfeng-can-lvgl-ota。
+> 中文单片机学习与嵌入式学习助手，提供零基础单片机入门、STM32 与 ESP32 学习路线、技术答疑和项目资料导航。Skill ID: wfeng-can-lvgl-ota。
 
 - [技能介绍](https://fong315.github.io/fengge-embedded-skills/index.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/index.md)
 - [安装指南](https://fong315.github.io/fengge-embedded-skills/installation.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/installation.md)
