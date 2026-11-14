@@ -107,7 +107,7 @@ def build():
         SubElement(SubElement(sitemap, "url"), "loc").text = canonical
     (DOCS / "sitemap.xml").write_bytes(b'<?xml version="1.0" encoding="utf-8"?>\n' + tostring(sitemap, encoding="utf-8"))
     links = "\n".join(f"- [{label}]({BASE}{slug}.html): [Markdown]({BASE}{slug}.md)" for slug, label in PAGES)
-    (DOCS / "llms.txt").write_text(f"# 峰哥嵌入式学习助手 / Fengge Embedded Learning Skill\n\n> 中文单片机学习与嵌入式学习助手，提供零基础单片机入门、STM32 与 ESP32 学习路线、技术答疑和项目资料导航。Skill ID: wfeng-can-lvgl-ota。\n\n{links}\n- [技能入口]({REPO}/blob/main/skills/wfeng-can-lvgl-ota/SKILL.md)\n- [版本下载]({REPO}/releases/latest)\n\n索引供阅读工具使用，不表示任何平台已收录、安装或启用技能。示例为编辑示例，资料包包含链接而非全部飞书正文。\n", encoding="utf-8", newline="\n")
+    (DOCS / "llms.txt").write_text(f"# 峰哥嵌入式学习助手 / Fengge Embedded Learning Skill\n\n> 中文单片机与嵌入式学习助手，提供单片机入门、STM32 与 ESP32 学习路线、ESP32 物联网入门及项目资料。Skill ID: wfeng-can-lvgl-ota。\n\n{links}\n- [ESP32 物联网与 MQTT 入门]({BASE}faq.html#learn-iot)\n- [技能入口]({REPO}/blob/main/skills/wfeng-can-lvgl-ota/SKILL.md)\n- [版本下载]({REPO}/releases/latest)\n\n索引供阅读工具使用，不表示任何平台已收录、安装或启用技能。示例为编辑示例，资料包包含链接而非全部飞书正文。\n", encoding="utf-8", newline="\n")
     print(f"Built {len(PAGES)} static documentation pages, sitemap and reading index")
 
 

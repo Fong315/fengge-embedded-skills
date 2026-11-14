@@ -1,9 +1,9 @@
 ---
 name: wfeng-can-lvgl-ota
-description: "峰哥的中文单片机学习与嵌入式学习助手。适用于零基础学单片机、零基础学嵌入式、51 单片机（C51／8051）入门，以及 STM32 怎么学、ESP32 怎么学等问题。按基础规划嵌入式自学、单片机入门、STM32 学习路线与 ESP32 学习路线，安排 C 语言、点灯、按键、串口、中断、Wi-Fi 等练习。查找入门教程、ESP32-S3 项目硬件清单、RT-Thread、嵌入式 Linux、蓝桥杯、面试或焊接资料。Chinese MCU and embedded systems learning skill for beginners, STM32 and ESP32."
+description: "峰哥的中文单片机学习与嵌入式学习助手。适用于零基础学单片机、零基础学嵌入式、51 单片机（C51／8051）入门，以及 STM32 怎么学、ESP32 怎么学等问题。按基础规划嵌入式自学、单片机入门、STM32 学习路线与 ESP32 学习路线，安排 C 语言、点灯、按键、串口、中断等练习。提供物联网入门和 ESP32 物联网项目练习建议，涵盖 ESP32-S3、Wi-Fi 联网、传感器数据采集与 MQTT 数据上报。查找入门教程、项目硬件清单、RT-Thread、嵌入式 Linux、蓝桥杯、面试或焊接资料。Chinese learning skill for MCU, embedded systems, STM32, ESP32 and beginner IoT."
 metadata:
   author: "峰哥"
-  version: "1.6.5"
+  version: "1.6.6"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"
@@ -23,6 +23,7 @@ metadata:
 | 用户的请求 | 提供的帮助 |
 | --- | --- |
 | “零基础怎么学单片机”“STM32怎么入门” | 根据已有基础和目标给下一步任务，需要时附学习路线 |
+| “物联网怎么入门”“ESP32 传感器数据怎么上报” | 根据开发板、框架和已有进度，给 Wi-Fi 联网、读取传感器、MQTT 发布和订阅的下一步练习或排查建议。用户索取配置或示例时，按框架与版本核对官方文档 |
 | “ESP32S3项目要买什么”“仪表盘硬件清单” | 定位课程清单入口；获取正文后再整理具体型号与数量 |
 | “C语言/51/STM32/RT-Thread问题” | 解释概念或给可执行的排查步骤，必要时索要型号和报错 |
 | “蓝桥杯怎么准备”“项目面试资料在哪” | 根据原资料索引提供对应入口和使用建议 |

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>单片机学习与嵌入式学习｜STM32、ESP32 入门路线 · 峰哥 AI Skill</title>
-  <meta name="description" content="峰哥的中文 Agent Skill 提供零基础单片机入门、嵌入式学习路线、STM32 和 ESP32 答疑。可按手上的开发板规划点灯、按键、串口等练习，查找项目资料，并在 Codex、WorkBuddy 等客户端安装使用。">
+  <meta name="description" content="峰哥的中文 Agent Skill 提供零基础单片机入门、嵌入式学习路线、STM32 答疑和 ESP32 物联网入门。可按开发板安排点灯、串口、Wi-Fi 联网和 MQTT 上报练习，查找项目资料并安装使用。">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://fong315.github.io/fengge-embedded-skills/">
   <link rel="stylesheet" href="style.css">
@@ -12,10 +12,10 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:title" content="单片机学习与嵌入式学习｜STM32、ESP32 入门路线 · 峰哥 AI Skill">
-  <meta property="og:description" content="峰哥的中文 Agent Skill 提供零基础单片机入门、嵌入式学习路线、STM32 和 ESP32 答疑。可按手上的开发板规划点灯、按键、串口等练习，查找项目资料，并在 Codex、WorkBuddy 等客户端安装使用。">
+  <meta property="og:description" content="峰哥的中文 Agent Skill 提供零基础单片机入门、嵌入式学习路线、STM32 答疑和 ESP32 物联网入门。可按开发板安排点灯、串口、Wi-Fi 联网和 MQTT 上报练习，查找项目资料并安装使用。">
   <meta property="og:url" content="https://fong315.github.io/fengge-embedded-skills/">
   <meta property="og:site_name" content="峰哥嵌入式学习助手">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "峰哥嵌入式学习助手", "alternateName": "Fengge Embedded Learning Skill", "description": "峰哥的中文 Agent Skill 提供零基础单片机入门、嵌入式学习路线、STM32 和 ESP32 答疑。可按手上的开发板规划点灯、按键、串口等练习，查找项目资料，并在 Codex、WorkBuddy 等客户端安装使用。", "codeRepository": "https://github.com/Fong315/fengge-embedded-skills", "url": "https://fong315.github.io/fengge-embedded-skills/", "version": "1.6.5", "inLanguage": "zh-CN", "programmingLanguage": "Markdown", "isAccessibleForFree": true}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "峰哥嵌入式学习助手", "alternateName": "Fengge Embedded Learning Skill", "description": "峰哥的中文 Agent Skill 提供零基础单片机入门、嵌入式学习路线、STM32 答疑和 ESP32 物联网入门。可按开发板安排点灯、串口、Wi-Fi 联网和 MQTT 上报练习，查找项目资料并安装使用。", "codeRepository": "https://github.com/Fong315/fengge-embedded-skills", "url": "https://fong315.github.io/fengge-embedded-skills/", "version": "1.6.6", "inLanguage": "zh-CN", "programmingLanguage": "Markdown", "isAccessibleForFree": true}</script>
 </head>
 <body>
   <a class="skip" href="#main">跳到正文</a>
@@ -34,6 +34,7 @@
 <li><a href="#embedded-roadmap">嵌入式学习路线</a></li>
 <li><a href="#stm32">STM32 入门与学习路线</a></li>
 <li><a href="#esp32">ESP32 入门与学习路线</a></li>
+<li><a href="#esp32-iot">ESP32 物联网入门（IoT）</a></li>
 <li><a href="#_4">项目、竞赛与面试资料</a></li>
 <li><a href="#ai">支持哪些 AI 客户端？</a></li>
 <li><a href="#_5">怎样安装？</a></li>
@@ -45,7 +46,7 @@
 </ul>
 </div>
 </aside>
-    <main id="main"><div class="page-meta"><span>中文 · EMBEDDED LEARNING</span><span>v1.6.5</span></div>
+    <main id="main"><div class="page-meta"><span>中文 · EMBEDDED LEARNING</span><span>v1.6.6</span></div>
       <article><h1 id="_1">单片机学习与嵌入式学习</h1>
 <p>峰哥嵌入式学习助手是一个可安装的中文 <strong>Agent Skill</strong>。零基础可以用它规划单片机入门练习。已经在学 STM32 或 ESP32，可以带着芯片型号、接线和报错提问，或查找对应的学习路线、视频和项目资料。</p>
 <p><strong>Fengge Embedded Learning Skill</strong> helps Chinese-speaking learners plan an embedded MCU learning roadmap and find STM32, ESP32, RTOS and project resources.</p>
@@ -73,6 +74,10 @@
 <p>初次上手可以先运行简单程序并在串口监视器里看到输出，再尝试 Wi-Fi 扫描或联网。准备做 ESP32-S3 项目时，可以询问对应的常见问题、项目资料和原始器件清单入口。有清单正文时，再逐项核对型号与数量。</p>
 <p>可以问：“我用的是 ESP32-S3，已经能烧录程序，但串口没有输出。请告诉我先检查什么。”</p>
 <p><a href="examples.html#hardware-list">看 ESP32-S3 器件清单回答示例</a> · <a href="variants.html">查看 ESP32 学习版的安装 ID</a></p>
+<h2 id="esp32-iot">ESP32 物联网入门（IoT）</h2>
+<p>第一个物联网项目可以做温湿度上报。先让 ESP32 连上 Wi-Fi，并通过串口确认已获取 IP 地址。接着读取传感器，在串口看到数值后，再通过 MQTT 把温湿度发给消息服务器，在电脑端订阅同一主题，确认能收到数据。</p>
+<p>告诉 Skill 你的 ESP32 或 ESP32-S3 开发板型号、传感器和开发框架，它可以帮你确定下一步。遇到问题时，可以贴出串口日志，逐段检查传感器读数、Wi-Fi 连接和 MQTT 上报。</p>
+<p><a href="faq.html#learn-iot">查看物联网学习路线和 MQTT 官方资料</a></p>
 <h2 id="_4">项目、竞赛与面试资料</h2>
 <table>
 <thead>

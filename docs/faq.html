@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>零基础学单片机｜STM32、ESP32 怎么学 · 峰哥 AI Skill 常见问题</title>
-  <meta name="description" content="零基础学单片机怎么开始，嵌入式自学先学什么，STM32 与 ESP32 入门怎么练。查看第一步练习、教程资料入口和峰哥 AI Skill 的安装方式。">
+  <title>单片机、STM32 与 ESP32 物联网入门｜峰哥 AI Skill 问答</title>
+  <meta name="description" content="零基础怎么学单片机、STM32 和 ESP32，嵌入式自学和物联网学习路线怎么安排。查看 ESP32 Wi-Fi 联网、传感器数据上报、MQTT 入门练习与官方资料。">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://fong315.github.io/fengge-embedded-skills/faq.html">
   <link rel="stylesheet" href="style.css">
   <link rel="sitemap" type="application/xml" href="https://fong315.github.io/fengge-embedded-skills/sitemap.xml">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:title" content="零基础学单片机｜STM32、ESP32 怎么学 · 峰哥 AI Skill 常见问题">
-  <meta property="og:description" content="零基础学单片机怎么开始，嵌入式自学先学什么，STM32 与 ESP32 入门怎么练。查看第一步练习、教程资料入口和峰哥 AI Skill 的安装方式。">
+  <meta property="og:title" content="单片机、STM32 与 ESP32 物联网入门｜峰哥 AI Skill 问答">
+  <meta property="og:description" content="零基础怎么学单片机、STM32 和 ESP32，嵌入式自学和物联网学习路线怎么安排。查看 ESP32 Wi-Fi 联网、传感器数据上报、MQTT 入门练习与官方资料。">
   <meta property="og:url" content="https://fong315.github.io/fengge-embedded-skills/faq.html">
   <meta property="og:site_name" content="峰哥嵌入式学习助手">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "峰哥嵌入式学习助手", "alternateName": "Fengge Embedded Learning Skill", "description": "零基础学单片机怎么开始，嵌入式自学先学什么，STM32 与 ESP32 入门怎么练。查看第一步练习、教程资料入口和峰哥 AI Skill 的安装方式。", "codeRepository": "https://github.com/Fong315/fengge-embedded-skills", "url": "https://fong315.github.io/fengge-embedded-skills/", "version": "1.6.5", "inLanguage": "zh-CN", "programmingLanguage": "Markdown", "isAccessibleForFree": true}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "峰哥嵌入式学习助手", "alternateName": "Fengge Embedded Learning Skill", "description": "零基础怎么学单片机、STM32 和 ESP32，嵌入式自学和物联网学习路线怎么安排。查看 ESP32 Wi-Fi 联网、传感器数据上报、MQTT 入门练习与官方资料。", "codeRepository": "https://github.com/Fong315/fengge-embedded-skills", "url": "https://fong315.github.io/fengge-embedded-skills/", "version": "1.6.6", "inLanguage": "zh-CN", "programmingLanguage": "Markdown", "isAccessibleForFree": true}</script>
 </head>
 <body>
   <a class="skip" href="#main">跳到正文</a>
@@ -32,6 +32,7 @@
 <li><a href="#self-study">嵌入式自学路线怎么安排？</a></li>
 <li><a href="#learn-stm32">STM32 怎么学？有没有入门教程或练习安排？</a></li>
 <li><a href="#learn-esp32">ESP32 怎么学？ESP32-S3 开发板怎么入门？</a></li>
+<li><a href="#learn-iot">零基础学物联网，ESP32 的第一个项目怎么做？</a></li>
 <li><a href="#stm32esp32-rt-thread">它支持 STM32、ESP32 和 RT-Thread 吗？</a></li>
 <li><a href="#ai">这是独立软件，还是安装到 AI 客户端的技能？</a></li>
 <li><a href="#codexdeepseekworkbuddy">Codex、DeepSeek、WorkBuddy、豆包都能安装吗？</a></li>
@@ -49,7 +50,7 @@
 </ul>
 </div>
 </aside>
-    <main id="main"><div class="page-meta"><span>中文 · EMBEDDED LEARNING</span><span>v1.6.5</span></div>
+    <main id="main"><div class="page-meta"><span>中文 · EMBEDDED LEARNING</span><span>v1.6.6</span></div>
       <article><h1 id="skill">单片机入门、嵌入式自学与 Skill 常见问题</h1>
 <p><a href="index.html">技能用途</a> · <a href="installation.html">安装指南</a> · <a href="examples.html">使用示例</a></p>
 <h2 id="zero-basics">零基础学单片机，先学 C 语言还是先动手？</h2>
@@ -60,6 +61,15 @@
 <p>会一点 C 语言的话，可以用 GPIO 点灯和读取按键，接着用串口打印按键状态，再用定时器做定时闪烁。把开发板型号、开发环境和做过的实验告诉 Skill，它可以给出第一周练习安排和 STM32 常见问题资料入口。见<a href="examples.html#stm32-first-week">STM32 第一周练习示例</a>。</p>
 <h2 id="learn-esp32">ESP32 怎么学？ESP32-S3 开发板怎么入门？</h2>
 <p>先确认开发板型号和使用的开发框架，烧录一个能在串口看到输出的示例。串口正常后，可以按目标学习 Wi-Fi 扫描或联网。做 ESP32-S3 项目时，可以让 Skill 查找项目资料和器件清单入口，也可以贴出烧录报错或串口日志，逐步排查。参见<a href="index.html#esp32">ESP32 学习路线</a>。</p>
+<h2 id="learn-iot">零基础学物联网，ESP32 的第一个项目怎么做？</h2>
+<p>可以从一个温湿度数据上报项目开始。每做一步都先确认结果，再接下一步。</p>
+<ol>
+<li><strong>ESP32 Wi-Fi 联网</strong>。先用开发框架的联网示例连上路由器，在串口确认拿到 IP 地址。</li>
+<li><strong>传感器数据采集</strong>。按传感器和开发板说明接线，读取温湿度并在串口打印，观察读数是否随环境变化。</li>
+<li><strong>MQTT 入门</strong>。用 ESP32 向 MQTT 消息服务器的一个主题发布读数，在电脑上订阅同一主题，核对收到的数值和串口日志是否一致。</li>
+</ol>
+<p>可以问：“我用 ESP32-S3 和 ESP-IDF，已经能连 Wi-Fi 和打印温湿度。怎样用 MQTT 上报，并在电脑上确认数据收到了？”</p>
+<p>使用 ESP-IDF 时，可以按芯片和版本查阅乐鑫手册。<a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-guides/wifi-driver/overview.html">ESP32-S3 Wi-Fi 指南</a> · <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-reference/protocols/mqtt.html">ESP-MQTT 文档</a></p>
 <h2 id="stm32esp32-rt-thread">它支持 STM32、ESP32 和 RT-Thread 吗？</h2>
 <p>包内资料索引包含 C 语言、51、STM32、ESP32、RT-Thread 常见问题，以及 ARM-Linux、焊接、蓝桥杯和项目面试入口。CAN、LVGL、OTA 可作为一般技术话题讨论，目前没有打包独立专题全文。</p>
 <h2 id="ai">这是独立软件，还是安装到 AI 客户端的技能？</h2>

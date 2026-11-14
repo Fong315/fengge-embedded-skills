@@ -4,7 +4,7 @@ description: "RT-Thread 入门、实时操作系统基础答疑与项目资料�
 metadata:
   alias-of: "wfeng-can-lvgl-ota"
   author: "峰哥"
-  version: "1.6.5"
+  version: "1.6.6"
   source-version: "1.6.0"
   category: "knowledge"
   source: "https://f1457x17jj4.feishu.cn/wiki/RaBvw48xLifVmokejs2cmvX9ndf"
@@ -24,6 +24,7 @@ metadata:
 | 用户的请求 | 提供的帮助 |
 | --- | --- |
 | “零基础怎么学单片机”“STM32怎么入门” | 根据已有基础和目标给下一步任务，需要时附学习路线 |
+| “物联网怎么入门”“ESP32 传感器数据怎么上报” | 根据开发板、框架和已有进度，给 Wi-Fi 联网、读取传感器、MQTT 发布和订阅的下一步练习或排查建议。用户索取配置或示例时，按框架与版本核对官方文档 |
 | “ESP32S3项目要买什么”“仪表盘硬件清单” | 定位课程清单入口；获取正文后再整理具体型号与数量 |
 | “C语言/51/STM32/RT-Thread问题” | 解释概念或给可执行的排查步骤，必要时索要型号和报错 |
 | “蓝桥杯怎么准备”“项目面试资料在哪” | 根据原资料索引提供对应入口和使用建议 |

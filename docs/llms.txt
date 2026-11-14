@@ -1,12 +1,13 @@
 # 峰哥嵌入式学习助手 / Fengge Embedded Learning Skill
 
-> 中文单片机学习与嵌入式学习助手，提供零基础单片机入门、STM32 与 ESP32 学习路线、技术答疑和项目资料导航。Skill ID: wfeng-can-lvgl-ota。
+> 中文单片机与嵌入式学习助手，提供单片机入门、STM32 与 ESP32 学习路线、ESP32 物联网入门及项目资料。Skill ID: wfeng-can-lvgl-ota。
 
 - [技能介绍](https://fong315.github.io/fengge-embedded-skills/index.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/index.md)
 - [安装指南](https://fong315.github.io/fengge-embedded-skills/installation.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/installation.md)
 - [使用示例](https://fong315.github.io/fengge-embedded-skills/examples.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/examples.md)
 - [常见问题](https://fong315.github.io/fengge-embedded-skills/faq.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/faq.md)
 - [版本](https://fong315.github.io/fengge-embedded-skills/variants.html): [Markdown](https://fong315.github.io/fengge-embedded-skills/variants.md)
+- [ESP32 物联网与 MQTT 入门](https://fong315.github.io/fengge-embedded-skills/faq.html#learn-iot)
 - [技能入口](https://github.com/Fong315/fengge-embedded-skills/blob/main/skills/wfeng-can-lvgl-ota/SKILL.md)
 - [版本下载](https://github.com/Fong315/fengge-embedded-skills/releases/latest)
 

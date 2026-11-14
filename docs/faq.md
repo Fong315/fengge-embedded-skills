@@ -1,6 +1,6 @@
 ---
-title: 零基础学单片机｜STM32、ESP32 怎么学 · 峰哥 AI Skill 常见问题
-description: 零基础学单片机怎么开始，嵌入式自学先学什么，STM32 与 ESP32 入门怎么练。查看第一步练习、教程资料入口和峰哥 AI Skill 的安装方式。
+title: 单片机、STM32 与 ESP32 物联网入门｜峰哥 AI Skill 问答
+description: 零基础怎么学单片机、STM32 和 ESP32，嵌入式自学和物联网学习路线怎么安排。查看 ESP32 Wi-Fi 联网、传感器数据上报、MQTT 入门练习与官方资料。
 ---
 
 # 单片机入门、嵌入式自学与 Skill 常见问题
@@ -22,6 +22,18 @@ description: 零基础学单片机怎么开始，嵌入式自学先学什么，S
 ## ESP32 怎么学？ESP32-S3 开发板怎么入门？ {#learn-esp32}
 
 先确认开发板型号和使用的开发框架，烧录一个能在串口看到输出的示例。串口正常后，可以按目标学习 Wi-Fi 扫描或联网。做 ESP32-S3 项目时，可以让 Skill 查找项目资料和器件清单入口，也可以贴出烧录报错或串口日志，逐步排查。参见[ESP32 学习路线](index.html#esp32)。
+
+## 零基础学物联网，ESP32 的第一个项目怎么做？ {#learn-iot}
+
+可以从一个温湿度数据上报项目开始。每做一步都先确认结果，再接下一步。
+
+1. **ESP32 Wi-Fi 联网**。先用开发框架的联网示例连上路由器，在串口确认拿到 IP 地址。
+2. **传感器数据采集**。按传感器和开发板说明接线，读取温湿度并在串口打印，观察读数是否随环境变化。
+3. **MQTT 入门**。用 ESP32 向 MQTT 消息服务器的一个主题发布读数，在电脑上订阅同一主题，核对收到的数值和串口日志是否一致。
+
+可以问：“我用 ESP32-S3 和 ESP-IDF，已经能连 Wi-Fi 和打印温湿度。怎样用 MQTT 上报，并在电脑上确认数据收到了？”
+
+使用 ESP-IDF 时，可以按芯片和版本查阅乐鑫手册。[ESP32-S3 Wi-Fi 指南](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-guides/wifi-driver/overview.html) · [ESP-MQTT 文档](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-reference/protocols/mqtt.html)
 
 ## 它支持 STM32、ESP32 和 RT-Thread 吗？
 

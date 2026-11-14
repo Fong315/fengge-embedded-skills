@@ -1,6 +1,6 @@
 ---
 title: 单片机学习与嵌入式学习｜STM32、ESP32 入门路线 · 峰哥 AI Skill
-description: 峰哥的中文 Agent Skill 提供零基础单片机入门、嵌入式学习路线、STM32 和 ESP32 答疑。可按手上的开发板规划点灯、按键、串口等练习，查找项目资料，并在 Codex、WorkBuddy 等客户端安装使用。
+description: 峰哥的中文 Agent Skill 提供零基础单片机入门、嵌入式学习路线、STM32 答疑和 ESP32 物联网入门。可按开发板安排点灯、串口、Wi-Fi 联网和 MQTT 上报练习，查找项目资料并安装使用。
 ---
 
 # 单片机学习与嵌入式学习
@@ -49,6 +49,14 @@ description: 峰哥的中文 Agent Skill 提供零基础单片机入门、嵌入
 可以问：“我用的是 ESP32-S3，已经能烧录程序，但串口没有输出。请告诉我先检查什么。”
 
 [看 ESP32-S3 器件清单回答示例](examples.html#hardware-list) · [查看 ESP32 学习版的安装 ID](variants.html)
+
+## ESP32 物联网入门（IoT） {#esp32-iot}
+
+第一个物联网项目可以做温湿度上报。先让 ESP32 连上 Wi-Fi，并通过串口确认已获取 IP 地址。接着读取传感器，在串口看到数值后，再通过 MQTT 把温湿度发给消息服务器，在电脑端订阅同一主题，确认能收到数据。
+
+告诉 Skill 你的 ESP32 或 ESP32-S3 开发板型号、传感器和开发框架，它可以帮你确定下一步。遇到问题时，可以贴出串口日志，逐段检查传感器读数、Wi-Fi 连接和 MQTT 上报。
+
+[查看物联网学习路线和 MQTT 官方资料](faq.html#learn-iot)
 
 ## 项目、竞赛与面试资料
 

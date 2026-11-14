@@ -1,12 +1,12 @@
 # 单片机学习与嵌入式学习｜STM32、ESP32 入门 · 峰哥 AI Skill
 
-峰哥嵌入式学习助手是公开可安装的中文 **Agent Skill**，提供零基础单片机入门、STM32 和 ESP32 学习路线、技术答疑与项目资料导航。告诉它你的 C 语言基础和手上的开发板，就可以从点亮 LED、按键输入或串口输出这类具体练习开始。已有项目时，也可以按报错、接线和目标现象排查，或查找对应的课程、视频和器件清单。
+峰哥嵌入式学习助手是公开可安装的中文 **Agent Skill**，提供零基础单片机入门、STM32 学习路线、ESP32 物联网入门和项目资料导航。告诉它你的 C 语言基础和手上的开发板，就可以从点亮 LED、按键输入或串口输出这类具体练习开始。已有项目时，也可以按报错、接线和目标现象排查，或查找对应的课程、视频和器件清单。
 
 **Chinese embedded-systems learning skill for Codex and compatible agents. Covers C, 8051, STM32, ESP32, RTOS, Linux, project hardware, competitions, and interviews.**
 
 - 技能名称：**峰哥 · 嵌入式单片机答疑**
 - 技能 ID：`wfeng-can-lvgl-ota`
-- 当前版本：`1.6.5`
+- 当前版本：`1.6.6`
 - 分发格式：标准 Agent Skill、WorkBuddy 专用包、普通聊天通用导入版
 
 [公开介绍页](https://fong315.github.io/fengge-embedded-skills/) · [逐平台安装指南](https://fong315.github.io/fengge-embedded-skills/installation.html) · [输入与回答示例](https://fong315.github.io/fengge-embedded-skills/examples.html) · [skills.sh 技能页](https://www.skills.sh/fong315/fengge-embedded-skills/wfeng-can-lvgl-ota) · [下载安装包](https://github.com/Fong315/fengge-embedded-skills/releases/latest)
@@ -25,6 +25,7 @@
 | [嵌入式学习路线](https://fong315.github.io/fengge-embedded-skills/#embedded-roadmap) | 按现有基础安排 C 语言、单片机、RTOS 或嵌入式 Linux 的学习顺序 |
 | [STM32 入门与学习路线](https://fong315.github.io/fengge-embedded-skills/#stm32) | 规划 GPIO、按键、串口、定时器和中断练习，结合型号和代码排查问题 |
 | [ESP32 入门与项目资料](https://fong315.github.io/fengge-embedded-skills/#esp32) | 从刷写程序和观察串口日志开始，查找 ESP32-S3 项目资料、常见问题和器件清单 |
+| [ESP32 物联网入门](https://fong315.github.io/fengge-embedded-skills/#esp32-iot) | 从 Wi-Fi 联网和传感器数据采集开始，在电脑上验证 MQTT 温湿度上报 |
 | 准备蓝桥杯或嵌入式项目面试 | 定位原资料索引里的备赛与项目面试入口 |
 
 技能采用中文师兄式交流。用户已经说明背景时会沿用；明确索要链接或要求直接回答时优先完成请求。CAN、LVGL、OTA 可作为一般技术话题讨论，当前包内没有独立专题全文。
@@ -124,6 +125,8 @@ $wfeng-can-lvgl-ota 我是大二学生，会一点 C 语言，想学 STM32，帮
 ```bash
 npx skills find wfeng-can-lvgl-ota
 ```
+
+如果你在找物联网学习路线、ESP32 物联网开发或 MQTT 入门，可以直接打开[物联网入门问答](https://fong315.github.io/fengge-embedded-skills/faq.html#learn-iot)，按联网、读取传感器和数据上报的顺序开始。
 
 `skills find` 使用技能目录的索引，收录和搜索更新可能有延迟。搜不到时，直接使用本页的 `npx skills add Fong315/fengge-embedded-skills --skill wfeng-can-lvgl-ota`，或下载 Release 安装包；按仓库地址安装不依赖搜索结果。
 
